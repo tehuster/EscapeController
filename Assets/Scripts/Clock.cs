@@ -13,14 +13,14 @@ public class Clock : MonoBehaviour
     private void Awake() {
         MainTime.SetValue(0f);
         PlayPauseBool.SetValue(false);
-        MaxTimeReached.SetValue(false);
+        MaxTimeReached.SetValue(false);        
     }
 
     void Update()
     {
         if (PlayPauseBool.Value)
         {
-            MainTime.SetValue(MainTime.Value += Time.deltaTime);       
+            MainTime.SetValue(MainTime.Value += Time.deltaTime); //Increase Maintime  
         }        
         if (MainTime.Value > MaxTime.Value){
             MaxTimeReached.SetValue(true);
