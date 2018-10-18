@@ -20,7 +20,7 @@ public class Clock : MonoBehaviour
     {
         if (PlayPauseBool.Value)
         {
-            MainTime.SetValue(MainTime.Value += Time.deltaTime); //Increase Maintime  
+            MainTime.SetValue(MainTime.Value += Time.deltaTime); 
         }        
         if (MainTime.Value > MaxTime.Value){
             MaxTimeReached.SetValue(true);
