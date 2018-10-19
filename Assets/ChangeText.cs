@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ChangeText : MonoBehaviour {
 	private Text thisText;
-
 	public BoolVariable PlayPauseToggle;
 
 	private void Awake() {
@@ -13,12 +12,10 @@ public class ChangeText : MonoBehaviour {
 	}
 
 	public void changeText(){			
-		if(PlayPauseToggle == false){
-			print("PAUSE");	
-			thisText.text = "PAUSE";
-		}else{
-			print("PLAY");	
+		if(PlayPauseToggle.Value){
 			thisText.text = "PLAY";
+		}else{
+			thisText.text = "PAUSE";
 		}
 	}	
 }
