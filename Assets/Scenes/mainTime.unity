@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 61628695}
   - component: {fileID: 61628697}
   - component: {fileID: 61628696}
+  - component: {fileID: 61628698}
   m_Layer: 5
   m_Name: TimeRemainingText
   m_TagString: Untagged
@@ -305,6 +306,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 61628694}
   m_CullTransparentMesh: 0
+--- !u!114 &61628698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 61628694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc4df21c32dfed64a8ccdf08d1e1a6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainTime: {fileID: 11400000, guid: 27ddd56e228c42d438f01573d37f8dd5, type: 2}
 --- !u!1 &107083636
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,7 +841,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &244490956
 MonoBehaviour:
@@ -2283,6 +2296,7 @@ GameObject:
   - component: {fileID: 1115939387}
   - component: {fileID: 1115939389}
   - component: {fileID: 1115939388}
+  - component: {fileID: 1115939390}
   m_Layer: 5
   m_Name: EscapeNode
   m_TagString: Untagged
@@ -2347,6 +2361,21 @@ MonoBehaviour:
   NodeOutput: '[NODE OUPUT]'
   NodeTime: 00:30
   StatusImageController: {fileID: 1363727738}
+--- !u!114 &1115939390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1115939386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef09ab97537e58a4d86b0d5ab5296552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainTime: {fileID: 11400000, guid: 27ddd56e228c42d438f01573d37f8dd5, type: 2}
+  NodeStartTime: {fileID: 11400000, guid: c2b2a9a078f8df44392fc6f1c8c92b76, type: 2}
+  NodeTime: {fileID: 11400000, guid: 30c015e88d6a7bc4185ad39a98d6155b, type: 2}
+  nodeActivated: {fileID: 11400000, guid: 52a9685fe8a81c24783700d155af8884, type: 2}
 --- !u!1 &1121784521
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,50 +2988,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1366675578}
   m_CullTransparentMesh: 0
---- !u!1 &1378193835
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1378193837}
-  - component: {fileID: 1378193836}
-  m_Layer: 0
-  m_Name: TimelineController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1378193836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1378193835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f350f20081b49c4dbdb5e44ff81cecc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiStartPauseText: {fileID: 168362854}
-  uiTimeRemainingText: {fileID: 61628696}
-  uiTimeRemainingSlider: {fileID: 1510518987}
-  timeDuration: 1
---- !u!4 &1378193837
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1378193835}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1398307804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,7 +3083,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1432882442
 GameObject:
@@ -3220,7 +3205,7 @@ GameObject:
   - component: {fileID: 1510518987}
   - component: {fileID: 1510518988}
   m_Layer: 5
-  m_Name: MainTimerSlider
+  m_Name: MainTimeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3769,8 +3754,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1751775499}
   - component: {fileID: 1751775500}
+  - component: {fileID: 1751775501}
   m_Layer: 5
-  m_Name: NodeTimer
+  m_Name: NodeTimeSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3846,6 +3832,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1751775501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1751775498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5136a0d04b32e114281abe854349d527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainTime: {fileID: 11400000, guid: c2b2a9a078f8df44392fc6f1c8c92b76, type: 2}
+  MaxTime: {fileID: 11400000, guid: 1734f71674a6b114eacbf60accb30996, type: 2}
 --- !u!1 &1819418318
 GameObject:
   m_ObjectHideFlags: 0
@@ -4610,7 +4609,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2018905053
 GameObject:
@@ -4709,5 +4708,5 @@ Transform:
   - {fileID: 1041838889}
   - {fileID: 1547024539}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
